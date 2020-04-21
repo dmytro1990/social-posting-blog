@@ -1,0 +1,7 @@
+<h3 class="title"><span *ngIf="!editing">{{title}}</span>
+    <input *ngIf="editing" type="text" [(ngModel)]="title">
+    <button *ngIf="!editing"(click)="editTitle()">Edit</button>
+    <button *ngIf="editing"(click)="saveTitle()">Save</button>
+</h3>
+      <p>{{body}}</p>
+      <span [ngClass]="{bold: comments > 6}">{{comments}}</span>
